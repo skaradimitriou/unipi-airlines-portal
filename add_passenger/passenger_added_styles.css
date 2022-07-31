@@ -1,0 +1,565 @@
+/*
+ * The var() function is used to insert the value of a CSS variable.
+ * To create a variable with global scope, declare it inside the :root selector. 
+ * Advantages of using var() are:
+ *
+ * 1. makes the code easier to read (more understandable)
+ * 2. makes it much easier to change the color values
+ */
+
+ :root {
+    --primary_color: #293462;
+    --secondary_color: #EC9B3B;
+    --text_color: #333333;
+
+    --table_even_color: #efefef;
+    --table_odd_color: white;
+
+    --page_bg_color: #efefef;
+    --container_bg_color: #e1e1e1;
+}
+
+body {
+    margin:0;
+    background-color: var(--page_bg_color);
+}
+
+/* disabling underline for links. They are handled by other styling rules.*/
+
+a {
+    text-decoration: none; 
+}
+
+.website_logo {
+    float: left;
+    height: 35px;
+    margin-top: 8px;
+    width: 35px;
+    padding-left: 1%;
+}
+
+.my_top_bar {
+    margin-left: auto;
+    float: right;
+    padding-top: 16px;
+    padding-right: 2%;
+}
+
+.top_bar_link {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+
+.top_bar_link:hover{
+    color:#ffffff;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #EC9B3B;
+}
+
+.website_banner {
+    height: 800px;
+    padding: 16px;
+}
+
+.website_banner_title{
+    color: white;
+    margin-top: 300px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+}
+
+.website_banner_desc {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.website_banner_btn{
+    background-color: var(--primary_color);    
+    margin: 0;
+    position: absolute;
+    margin-top: 48px;
+    left: 50%; /* used to center the promo button */
+    -ms-transform: translate(-50%, -50%); /* used to center the promo button */
+    transform: translate(-50%, -50%); /* used to center the promo button */
+    padding: 12px 20px; /* x,y => x: vertical padding, y: horizontal padding */
+    border-radius: 50px; /* makes the button rounded by 4px */
+}
+
+/*
+ * Page Banners Bellow:
+ */
+
+.hero_banner {
+    background-image: url("../img/inside_airport_view.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.btn_link{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-decoration: none;
+    border: none; /* removes the outline border from the btn */
+    cursor: pointer;
+}
+
+/* General Containers used in all screens */
+
+.container{
+    padding:16px;
+    background-color: var(--container_bg_color);
+    height: 100px;
+    padding-top:50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 100px;
+}
+
+/*
+    Main content stylings
+*/
+
+
+.descriptive_text{
+    padding-top:50px;
+    padding-bottom:50px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.attention_header {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary_color);
+    font-size: 24px;
+    text-align: center;
+}
+
+.divider {
+    width: 50px;
+    border-top: 3px solid var(--secondary_color);
+}
+
+.description {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text_color);
+    text-align: justify;
+}
+
+/* Contact Forms */
+
+.contact_form_inner {
+    padding: 20px 20px 20px 20px; /*x,y,z,k => x: top, y: right, z: bottom, k: left */
+    height:750px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.form_inner_left{
+    float:left;
+    width:46.5%;
+    margin-right:10px;
+}
+
+.form_inner_right{
+    float:right;
+    width:46.5%;
+    margin-right:10px;
+}
+
+
+.header {
+    font-family: 'Roboto', sans-serif;
+    color: #293462;
+    font-size: 24px;
+    text-align: center;
+}
+
+.divider {
+    width: 50px;
+    border-top: 3px solid #EC9B3B;
+}
+
+label {
+    color: #666666;
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=date], input[type=password] {
+    width: 97%;
+    margin-top: 8px;
+    margin-bottom:30px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f6f6;
+    border:none;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+select {
+    width: 99.5%;
+    margin-top: 8px;
+    margin-bottom:30px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f6f6;
+    border:none;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+label[for=visa], label[for=mastercard]{
+    margin-top: 8px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom:30px;
+}
+
+.form_btn_clean {
+    background-color: #666666;
+    color: white;
+    margin-top: 20px;
+    margin-right: 16px;
+    padding: 12px 20px; /* x,y => x: vertical padding, y: horizontal padding */
+    border: none; /* removes the outline border from the btn */
+    border-radius: 4px; /* makes the button rounded by 4px */
+    cursor: pointer;
+}
+
+.form_btn_clean:hover{
+    background-color: #888888;
+}
+
+.form_btn_save {
+    background-color: #293462;
+    color: white;
+    margin-top: 20px;
+    margin-right: 16px;
+    padding: 12px 20px; /* x,y => x: vertical padding, y: horizontal padding */
+    border: none; /* removes the outline border from the btn */
+    border-radius: 4px; /* makes the button rounded by 4px */
+    cursor: pointer;
+}
+
+.form_btn_save:hover {
+    background-color: #3b4c8f;
+}
+
+.form_btn_print {
+    background-color: #EC9B3B;
+    color: white;
+    margin-top: 20px;
+    margin-right: 16px;
+    padding: 12px 20px; /* x,y => x: vertical padding, y: horizontal padding */
+    border: none; /* removes the outline border from the btn */
+    border-radius: 4px; /* makes the button rounded by 4px */
+    cursor: pointer;
+}
+
+.form_btn_print:hover{
+    background-color: #f7b462;
+}
+
+/*
+ * Footer stylings
+ */
+
+ .footer {
+    background-color:#222222;
+    padding: 16px;
+    height:750px;
+}
+
+.footer_text {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.footer_btn{
+    background-color: var(--primary_color);    
+    margin: 0;
+    position: absolute;
+    margin-top: 48px;
+    left: 50%; /* used to center the promo button */
+    -ms-transform: translate(-50%, -50%); /* used to center the promo button */
+    transform: translate(-50%, -50%); /* used to center the promo button */
+    padding: 12px 20px; /* x,y => x: vertical padding, y: horizontal padding */
+    border-radius: 50px; /* makes the button rounded by 4px */
+}
+
+.footer_btn:hover {
+    background-color: #3b4c8f;
+}
+
+.footer_sitemap {
+    margin-top: 150px;
+    width: 15%;
+}
+
+.footer_sitemap_header {
+    color: white;
+    margin-left:32px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.footer_sitemap_item {
+    color: rgba(255, 255, 255, 0.7);
+    margin-left:32px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.footer_sitemap_item:hover {
+    color:white;
+    text-decoration: underline;
+}
+
+.developed_by{
+    margin-top: 150px;
+    padding: 32px;
+    color: rgba(255, 255, 255,0.6);
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+.footer_go_up_btn {
+    width:42px;
+    height:42px;
+    float:right;
+    margin-top: 100px;
+    padding: 32px;
+}
+
+/*
+ * Media Queries.
+ * 
+ */
+
+/* Large Screen */
+
+@media screen and (max-width: 1600px) {
+    .website_banner_title{
+        padding-top: 60px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .form_inner_left{
+        float:left;
+        width:44%;
+        margin-right:10px;
+    }
+    
+    .form_inner_right{
+        float:right;
+        width:44%;
+        margin-right:10px;
+    }
+
+    .footer {
+        height:850px;
+    }
+}
+
+/* Medium Screen */
+
+@media screen and (max-width: 1250px) {
+    .website_banner {
+        height: 700px;
+        padding: 16px;
+        width: 97.3%;
+    }
+
+    .website_banner_title{
+        padding-top: 60px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .container{
+        padding: 24px;
+        background-color: #e5e5e5;
+        height:100px;
+        width: 96%;
+    }
+
+    .descriptive_text{
+        padding: 24px;
+    }
+
+    .form_inner_left{
+        float:left;
+        width:44%;
+        margin-right:10px;
+    }
+    
+    .form_inner_right{
+        float:right;
+        width:44%;
+        margin-right:10px;
+    }
+
+    .footer {
+        background-color:#222222;
+        padding: 16px;
+        height:850px;
+        width:97.1%;
+    }
+
+    .footer_sitemap {
+        width: 25%;
+    }
+}
+
+/* Tablet Screen */
+
+@media screen and (max-width: 1050px) {
+    .website_banner_title{
+        padding-top: 25px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+    }
+    .website_banner {
+        height: 700px;
+        padding: 16px;
+        width: 97.18%;
+    }
+
+    .container{
+        padding: 10px;
+        background-color: #e5e5e5;
+        height:100px;
+        width: 98.2%;
+    }
+
+    .descriptive_text{
+        padding: 20px;
+    }
+
+    .form_inner_left{
+        float:left;
+        width:95%;
+        margin-right:10px;
+    }
+    
+    .form_inner_right{
+        float:left;
+        width:95%;
+        margin-top: 20px;
+    }
+
+    .footer {
+        background-color:#222222;
+        padding: 16px;
+        height:1000px;
+        width: 97.1%;
+    }
+
+    .footer_sitemap {
+        width: 25%;
+    }
+
+    .developed_by{
+        margin-top: 300px;
+        color: rgba(255, 255, 255,0.6);
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    .footer_go_up_btn {
+        float:right;
+        margin-top: 160px;
+        padding: 16px;
+    }
+
+    .left_url_white {
+        font-family: 'Roboto', sans-serif;
+        text-align: left;
+        margin-top: 20px;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+ /* Mobile Screen */
+
+ @media screen and (max-width: 500px) {
+
+    .website_banner {
+        height: 700px;
+        padding: 16px;
+        width: 93.6%;
+    }
+
+    .website_banner_title{
+        padding-top: 60px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .container{
+        padding: 10px;
+        background-color: #e5e5e5;
+        height:150px;
+        width: 95%;
+    }
+
+    .form_inner_left{
+        float:left;
+        width:92%;
+        margin-right:10px;
+    }
+    
+    .form_inner_right{
+        float:left;
+        width:92%;
+        margin-top: 20px;
+    }
+
+    .footer {
+        background-color:#222222;
+        padding: 16px;
+        height:1000px;
+        width: 93.7%;
+    }
+    
+    .footer_sitemap {
+        width: 50%;
+    }
+
+    .developed_by{
+        margin-top: 300px;
+        color: rgba(255, 255, 255,0.6);
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    .footer_go_up_btn {
+        float:right;
+        margin-top: 160px;
+        padding: 16px;
+    }
+}
