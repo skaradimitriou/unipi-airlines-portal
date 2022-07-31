@@ -1,0 +1,491 @@
+/*
+ * The var() function is used to insert the value of a CSS variable.
+ * To create a variable with global scope, declare it inside the :root selector. 
+ * Advantages of using var() are:
+ *
+** 1. makes the code easier to read (more understandable)
+ * 2. makes it much easier to change the color values
+ */
+
+:root {
+    --primary_color: #293462;
+    --secondary_color: #EC9B3B;
+    --text_color: #333333;
+    --light_grey : #666666;
+}
+
+body {
+    margin:0;
+    background-color: #efefef;
+}
+
+/* disabling underline for links. They are handled by other styling rules.*/
+
+a {
+    text-decoration: none; 
+}
+
+.website_logo {
+    float: left;
+    height: 35px;
+    margin-top: 8px;
+    width: 35px;
+    padding-left: 1%;
+}
+
+.my_top_bar {
+    margin-left: auto;
+    float: right;
+    padding-top: 16px;
+    padding-right: 2%;
+}
+
+.top_bar_link {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+
+.top_bar_link:hover{
+    color:#ffffff;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #EC9B3B;
+}
+
+.active_destination {
+    color:#ffffff;
+    font-weight: bold;
+}
+
+.website_banner {
+    height: 800px;
+    padding: 16px;
+}
+
+.website_banner_title{
+    padding-top: 60px;
+    color: white;
+    margin-top: 300px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+}
+
+.website_banner_desc {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*
+ * Page Banners Bellow:
+ */
+
+.hero_banner {
+    background-image: url("img/contact/contact.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.btn_link{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-decoration: none;
+    border: none; /* removes the outline border from the btn */
+    cursor: pointer;
+}
+
+/* General Containers used in all screens */
+
+.container{
+    padding:16px;
+    background-color: #e5e5e5;
+    height:650px;
+    padding-top:50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 100px;
+}
+
+.inner {
+    padding:16px;
+    height:550px;
+    width:47.5%;
+    border-radius: 5px;
+}
+
+/* Form Stylings*/
+.form_header {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary_color);
+    font-size: 24px;
+    text-align: center;
+}
+
+.divider {
+    width: 50px;
+    border-top: 3px solid var(--secondary_color);
+}
+
+label {
+    color: #666666;
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type=text] {
+    width: 97%;
+    margin-top: 8px;
+    margin-bottom:30px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f6f6;
+    border:none;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.form_btn {
+    background-color: #293462;
+    color: white;
+    margin-top: 20px;
+    padding: 12px 20px; /* x,y => x: vertical padding, y: horizontal padding */
+    border: none; /* removes the outline border from the btn */
+    border-radius: 4px; /* makes the button rounded by 4px */
+    cursor: pointer;
+}
+
+.form_btn:hover {
+    background-color: #3b4c8f;
+}
+
+.company_details{
+    margin-top: 10px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary_color);
+}
+
+/*
+ * Footer stylings
+ */
+
+.footer {
+    background-color:#222222;
+    padding: 16px;
+    height:750px;
+}
+
+.footer_text {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.footer_btn{
+    background-color: var(--primary_color);    
+    margin: 0;
+    position: absolute;
+    margin-top: 48px;
+    left: 50%; /* used to center the promo button */
+    -ms-transform: translate(-50%, -50%); /* used to center the promo button */
+    transform: translate(-50%, -50%); /* used to center the promo button */
+    padding: 12px 20px; /* x,y => x: vertical padding, y: horizontal padding */
+    border-radius: 50px; /* makes the button rounded by 4px */
+}
+
+.footer_btn:hover {
+    background-color: #3b4c8f;
+}
+
+.footer_sitemap {
+    margin-top: 150px;
+    width: 15%;
+}
+
+.footer_sitemap_header {
+    color: white;
+    margin-left:32px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.footer_sitemap_item {
+    color: rgba(255, 255, 255, 0.7);
+    margin-left:32px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.footer_sitemap_item:hover {
+    color:white;
+    text-decoration: underline;
+}
+
+.developed_by{
+    margin-top: 150px;
+    padding: 32px;
+    color: rgba(255, 255, 255,0.6);
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+.footer_go_up_btn {
+    width:42px;
+    height:42px;
+    float:right;
+    margin-top: 100px;
+    padding: 32px;
+}
+
+/*
+ * Media Queries.
+ * 
+ */
+
+/* Large Screen */
+
+ @media screen and (max-width: 1600px) {
+    .website_banner_title{
+        padding-top: 60px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .inner {
+        padding:16px;
+        height:550px;
+        width:46%;
+        border-radius: 5px;
+    }
+
+    .airlines_map {
+        height:280px;
+        width: 97%;
+    }
+
+    .footer {
+        height:850px;
+    }
+}
+
+/* Medium Screen */
+
+@media screen and (max-width: 1250px) {
+    .website_banner {
+        height: 700px;
+        padding: 16px;
+        width: 97.3%;
+    }
+
+    .website_banner_title{
+        padding-top: 60px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .container{
+        padding: 10px;
+        background-color: #e5e5e5;
+        height:1500px;
+        width: 98%;
+    }
+
+    .divider {
+        margin-bottom: 34px;
+    }
+
+    .inner {
+        height:600px;
+        width: 97%;
+        margin-bottom: 16px;
+    }
+
+    .airlines_map {
+        height:280px;
+    }
+
+    .form_btn {
+        width:100%;
+        padding: 16px;
+        font-size: medium;
+    }
+
+    .footer {
+        background-color:#222222;
+        padding: 16px;
+        height:850px;
+        width:97.1%;
+    }
+
+    .footer_sitemap {
+        width: 25%;
+    }
+}
+
+/* Tablet Screen */
+
+@media screen and (max-width: 1050px) {
+    .website_banner_title{
+        padding-top: 25px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+    }
+    .website_banner {
+        height: 700px;
+        padding: 16px;
+        width: 97.18%;
+    }
+
+    .container{
+        padding: 10px;
+        background-color: #e5e5e5;
+        height:1500px;
+        width: 98%;
+    }
+
+    .divider {
+        margin-bottom: 34px;
+    }
+
+    .inner {
+        height:600px;
+        width: 96.2%;
+        margin-bottom: 16px;
+    }
+
+    .form_btn {
+        width:100%;
+        padding: 16px;
+        font-size: medium;
+    }
+
+    .footer {
+        background-color:#222222;
+        padding: 16px;
+        height:1000px;
+        width: 97%;
+    }
+
+    .footer_sitemap {
+        width: 25%;
+    }
+
+    .developed_by{
+        margin-top: 300px;
+        color: rgba(255, 255, 255,0.6);
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    .footer_go_up_btn {
+        float:right;
+        margin-top: 160px;
+        padding: 16px;
+    }
+
+    .left_url_white {
+        font-family: 'Roboto', sans-serif;
+        text-align: left;
+        margin-top: 20px;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+ /* Mobile Screen */
+
+ @media screen and (max-width: 500px) {
+
+    .website_banner {
+        height: 700px;
+        padding: 16px;
+        width: 93.6%;
+    }
+
+    .website_banner_title{
+        padding-top: 60px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .container{
+        padding: 16px;
+        margin-top: 16px;
+        background-color: #e5e5e5;
+        height:1500px;
+        width: 94.5%;
+    }
+
+    .divider {
+        margin-bottom: 34px;
+    }
+
+    .inner {
+        height:580px;
+        width: 93%;
+        margin-bottom: 16px;
+    }
+
+    .form_btn {
+        width:100%;
+        padding: 16px;
+        font-size: medium;
+    }
+
+    .footer {
+        background-color:#222222;
+        padding: 16px;
+        height:1000px;
+        width: 93.7%;
+    }
+
+    .footer_sitemap {
+        width: 50%;
+    }
+
+    .developed_by{
+        margin-top: 300px;
+        color: rgba(255, 255, 255,0.6);
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    .footer_go_up_btn {
+        float:right;
+        margin-top: 160px;
+        padding: 16px;
+    }
+
+    .left_url_white {
+        font-family: 'Roboto', sans-serif;
+        text-align: left;
+        margin-top: 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .airlines_map {
+        height:280px;
+        width: 95%;
+    }
+}
