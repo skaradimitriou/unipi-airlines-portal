@@ -3,8 +3,16 @@
 
 <img src="https://user-images.githubusercontent.com/64270931/182029642-ec3f1104-3ea3-4dea-9157-97e8ee43a4b1.png" width="750" />
 
-[Preview of the website here](https://unipi-airlines-app.herokuapp.com/index.php)
+[Redirect to Website](https://unipi-airlines-app.herokuapp.com/index.php)
 
+This project was developed for the Front End Development course in University of Piraeus (UoP). The project requirements covered basic form validations, basic js & php syntax.
+
+As a user, I can:
+
+- Register as a new user from the second tab
+- View my data by the login in the third tab
+- Send message to the airlines company
+- Browse through the company's info & site pages
 
 ## Project Tech Stack
 
