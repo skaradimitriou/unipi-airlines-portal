@@ -20,7 +20,7 @@
         <!-- Website's Banner -->
 
         <div id="navigation_menu" class="website_banner home_banner">
-            <a href="index.php">
+            <a href="../index.php">
                 <img class="website_logo" src="../img/icons/stathis_airlines_logo_white.png" alt="stathis_airlines_logo_sm"/>
             </a>
 
