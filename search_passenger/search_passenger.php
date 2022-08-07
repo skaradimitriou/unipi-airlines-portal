@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
         <title>Αναζήτηση Επιβάτη - Stathis Airlines</title>
-        <link rel="icon" type="image/x-icon" href="img/icons/stathis_airlines_logo_white.ico">
+        <link rel="icon" type="image/x-icon" href="../img/icons/stathis_airlines_logo_white.ico">
 
         <!-- Allows Media Queries-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
