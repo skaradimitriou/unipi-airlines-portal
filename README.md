@@ -1,9 +1,12 @@
 # Stathis Airlines Web Portal
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/64270931/182029642-ec3f1104-3ea3-4dea-9157-97e8ee43a4b1.png" width="750" />
 
-<img src="https://user-images.githubusercontent.com/64270931/182029642-ec3f1104-3ea3-4dea-9157-97e8ee43a4b1.png" width="750" />
+  [Redirect to Website](https://unipi-airlines-app.herokuapp.com/index.php)
+</div>
 
-[Redirect to Website](https://unipi-airlines-app.herokuapp.com/index.php)
+<br><br>
 
 This project was developed for the Front End Development course in University of Piraeus (UoP). The project requirements covered basic form validations, basic js & php syntax.
 
